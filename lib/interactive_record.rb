@@ -66,7 +66,7 @@ class InteractiveRecord
     if attribute.is_a? Integer
       sql = <<-SQL
         SELECT * FROM #{self.table_name}
-        WHERE '#{attribute}' = attribute
+        WHERE '#{attribute}' = butthead
       SQL
     else
       sql = <<-SQL
