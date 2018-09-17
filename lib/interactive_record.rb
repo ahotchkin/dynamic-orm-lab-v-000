@@ -63,17 +63,12 @@ class InteractiveRecord
   end
 
   def self.find_by(attribute)
-    # if attribute.is_a? Integer
-    #   sql = <<-SQL
-    #     SELECT * FROM #{self.table_name}
-    #     WHERE '#{attribute}' = butthead
-    #   SQL
-    # else
-      sql = <<-SQL
-        SELECT * FROM #{self.table_name}
-        WHERE '#{attribute}' = '#{attribute}'
-      SQL
-    # end
+    attribute.each do |key, value|
+      
+    sql = <<-SQL
+      SELECT * FROM #{self.table_name}
+      WHERE '#{attribute}' = '#{attribute}'
+    SQL
 
     DB[:conn].execute(sql)
   end
