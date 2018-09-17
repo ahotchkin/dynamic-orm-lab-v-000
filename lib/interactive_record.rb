@@ -63,7 +63,7 @@ class InteractiveRecord
   end
 
   def self.find_by(attribute)
-    if attribute.is_a? INTEGER
+    if attribute.is_a? Integer
       sql = <<-SQL
         SELECT * FROM #{self.table_name}
         WHERE '#{attribute}' = #{attribute}
