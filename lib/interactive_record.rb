@@ -63,8 +63,10 @@ class InteractiveRecord
   end
 
   def self.find_by(attribute)
-    attribute_key =
-    attribute_value = 
+    attribute_key = ""
+    attribute_value = ""
+
+    
 
     sql = <<-SQL
       SELECT * FROM #{self.table_name}
